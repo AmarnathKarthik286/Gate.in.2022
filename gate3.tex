@@ -18,19 +18,13 @@
 \maketitle
 \bibliographystyle{IEEEtran}
 
-\textbf{Question:}\\
+\textbf{Question:}\\ \\
 In the circuit shown, the switch is initially closed. It is opened at t= 0 s and
 remains open thereafter. The time (in milliseconds) at which the output voltage
-$V_{out}$ becomes LOW is  (round off to three decimal places
+$V_{out}$ becomes LOW is  (round off to three decimal places)\\
+\input{figs/tikzque}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{figs/circuit question.png}
-    \caption{circuit diagram}
-\end{figure}
-
-
-\textbf{Solution:}\\
+\textbf{Solution:}\\ \\
 At t$=0^-$, when the switch is closed,\\
 The voltage across the capacitor is:
 \begin{align}
@@ -44,7 +38,7 @@ The voltage across inverting terminal is:
 V_I&=5*\frac{600}{600+400}\\
 &=2V
 \end{align}
-Immediately after the switch is open, voltage across capacitor do not change.\\ So $V_{NI}>V_I$,Hence the output of OP-AMP is fixed to 5V.
+Immediately after the switch is open, voltage across capacitor do not change.\\ So $V_{NI}>V_I$,Hence the output of OP-AMP is fixed to +5V.
 Later, Capacitor discharges into 5K$\Omega$ resistor.\\
 The discharging equation is as follows:
 \begin{align}
@@ -52,9 +46,10 @@ The discharging equation is as follows:
     2&=\frac{25}{6}*e^{\frac{t_0}{RC}}\\
     t&=RC\ln\brak{\frac{25}{12}}\\
     &=0.1*10^{-6}*5*10^{3}\ln{\brak{\frac{25}{12}}}\\
-    t&=0.367 ms
+    t&=0.367ms
 \end{align}
 
-\input{figs/tikz.tex}
+\input{figs/tikzans}
 
 \end{document}
+
