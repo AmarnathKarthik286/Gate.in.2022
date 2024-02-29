@@ -14,10 +14,11 @@
       \draw (5,-3.5) -- (5,-3.9);
     \draw (opamp.-) -- (3,-2.5)node[left]{$V_I=2V$};
     \draw (opamp.out) -- (6,-3) --(7,-3) node[right] {$V_{out}$};
-    \draw (opamp.+) -- (3,-3.5)node[left]{$V_{NI}$} -- (3,-4.5);
-    \draw (3,-4.5) to[resistor={{$5k\Omega$}}] (3,-6.5)node[ground]{};
-    \draw (3,-4.5) -- (0.8,-4.5);
-    \draw (0.8,-4.5) to[C, l=$0.1\mu F$] (0.8,-6.5)node[ground]{};
+    \draw (opamp.+) -- (3,-3.5)node[above]{$V_{NI}$} -- (3,-4.5);
+    \draw (3,-4.5) to[resistor={{$5k\Omega$}}] (3,-7.5)node[ground]{};
+  % \draw (3,-4.5) -- (0.8,-4.5);
+    \draw (0.8,-4.5) to [V, v=$\frac{25}{6s}V$] (3,-4.5);
+    \draw (0.8,-4.5) to[resistor={{$\frac{1}{10^{-7}s}\Omega$}}] (0.8,-7.5)node[ground]{};
 \end{circuitikz}
-    \caption{circuit diagram at $t=0^+$}
+    \caption{circuit diagram in laplace domain at $t=0^+$}
 \end{figure}
