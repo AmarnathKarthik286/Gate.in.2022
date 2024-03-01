@@ -1,6 +1,6 @@
 \begin{figure}
 \centering
-\begin{circuitikz}
+\begin{circuitikz}[american]
 
     % Draw resistors and voltage source
     \draw (0,0) node[left] {$5V$}to[resistor={{$600\Omega$}}] (2,0) ;
@@ -17,8 +17,9 @@
     \draw (opamp.+) -- (3,-3.5)node[above]{$V_{NI}$} -- (3,-4.5);
     \draw (3,-4.5) to[resistor={{$5k\Omega$}}] (3,-7.5)node[ground]{};
   % \draw (3,-4.5) -- (0.8,-4.5);
-    \draw (0.8,-4.5) to [V, v=$\frac{25}{6s}V$] (3,-4.5);
+    \draw (3,-4.5) to [V, v=$\frac{25}{6s}V$] (0.8,-4.5);
     \draw (0.8,-4.5) to[resistor={{$\frac{1}{10^{-7}s}\Omega$}}] (0.8,-7.5)node[ground]{};
 \end{circuitikz}
     \caption{circuit diagram in laplace domain at $t=0^+$}
 \end{figure}
+
